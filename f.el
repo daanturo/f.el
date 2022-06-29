@@ -34,8 +34,8 @@
 
 (require 's)
 (require 'dash)
-(when (version<= "28.1" emacs-version)
-  (require 'f-shortdoc))
+(eval-after-load 'shortdoc
+  '(require 'f-shortdoc))
 
 (put 'f-guard-error 'error-conditions '(error f-guard-error))
 (put 'f-guard-error 'error-message "Destructive operation outside sandbox")
